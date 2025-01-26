@@ -31,8 +31,8 @@ interface LabelModalProps {
   }[];
 }
 
-export default function LabelModal({ modal, projects }: LabelModalProps) {
-  const { active, index } = modal;
+export default function LabelModal({ modal }: LabelModalProps) {
+  const { active } = modal;
   const modalContainer = useRef<HTMLDivElement>(null);
   const cursor = useRef<HTMLDivElement>(null);
   const cursorLabel = useRef<HTMLDivElement>(null);
