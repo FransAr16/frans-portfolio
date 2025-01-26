@@ -8,7 +8,7 @@ import Link from "next/link";
 import { CgArrowUp } from "react-icons/cg";
 
 interface FooterNavBottomProps {
-  href?: string | any;
+  href?: string;
   text: string;
   className?: string;
 }

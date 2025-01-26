@@ -17,15 +17,6 @@ const transition = {
   },
 };
 
-const overlay = {
-  initial: {
-    clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-  },
-  animate: {
-    clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
-  },
-};
-
 export default function PageTransition({
   children,
 }: {
