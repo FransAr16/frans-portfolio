@@ -54,7 +54,7 @@ export default function RecentWork() {
         </div>
 
         {/* Mobile */}
-        <div className="relative items-center justify-center flex lg:hidden px-[1rem] sm:px-[1.5rem] py-[4rem]">
+        <div className="relative items-center justify-center flex lg:hidden main-container py-[4rem]">
           <div className="w-full flex flex-col sm:flex-row gap-[6rem] gap-x-[1.2rem] items-center justify-center ">
             {latestWork
               .slice(2, 4)
