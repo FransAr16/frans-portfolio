@@ -31,7 +31,7 @@ export default function MyWorkMobile({
 
   return (
     <div key={index} className="w-full h-full">
-      <div ref={ref} className="block w-full relative">
+      <div ref={ref} className="flex w-full relative">
         <motion.div
           initial={{
             clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
