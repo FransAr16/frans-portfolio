@@ -118,7 +118,7 @@ export default function MyWorks() {
         </div>
 
         {/* Mobile */}
-        <div className="wide-container relative w-full h-full items-center justify-center flex lg:hidden px-[1rem] sm:px-[2.5rem] lg:px-[3.5rem] xl:px-[5.5rem] 2xl:px-[10rem] py-[4rem] sm:py-[5rem] md:py-[6rem]">
+        <div className="main-container relative w-full h-full items-center justify-center flex lg:hidden py-[4rem] sm:py-[5rem] md:py-[6rem]">
           <motion.div
             className="w-full grid sm:grid-cols-2 gap-y-[6rem] sm:gap-x-[1.4rem] items-center justify-center"
             initial={visible ? "hidden" : "exit"}
