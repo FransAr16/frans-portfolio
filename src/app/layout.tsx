@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "../styles/globals.css";
 import PageTransition from "@/components/PageTransition";
 import { CategoryProvider } from "@/context/CategoryContext";
@@ -17,7 +18,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-geist antialiased`}>
         <PageTransition>
-          <CategoryProvider>{children}</CategoryProvider>
+          <CategoryProvider>
+            {children}
+            <SpeedInsights />
+          </CategoryProvider>
         </PageTransition>
       </body>
     </html>
