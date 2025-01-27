@@ -52,14 +52,14 @@ export default function MyWorkMobile({
             initial={{ scale: 1.6 }}
             animate={isInViewImg ? { scale: 1 } : { scale: 1.5 }}
             transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-            className="w-full h-full"
+            className=""
           >
             <Image
               src={`/img/${img}`}
               width={1920}
               height={1080}
               alt='work'
-              className={`${imgClassName} w-full h-full object-cover`}
+              className={`${imgClassName} w-full h-auto`}
             />
           </motion.div>
         </motion.div>
