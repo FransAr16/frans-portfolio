@@ -52,7 +52,7 @@ export default function MyWorkMobile({
             initial={{ scale: 1.6 }}
             animate={isInViewImg ? { scale: 1 } : { scale: 1.5 }}
             transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-            className=""
+            className="w-full"
           >
             <Image
               src={`/img/${img}`}
