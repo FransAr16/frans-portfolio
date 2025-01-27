@@ -52,7 +52,6 @@ export default function Sidebar({ onClose }: SidebarProps) {
             <div className="text-background col-span-8">
               <Logo
                 href="/"
-                controls=""
                 text="FRANS"
                 className="font-black text-[2.4rem]"
               />
@@ -125,7 +124,7 @@ export default function Sidebar({ onClose }: SidebarProps) {
   );
 }
 
-function Logo({ href, text, className }: LogoProps & { controls: any }) {
+function Logo({ href, text, className }: LogoProps) {
   return (
     <>
       <Link href={href}>

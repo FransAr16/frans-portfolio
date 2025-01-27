@@ -5,6 +5,20 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { progress } from "@/data/animation";
 
+interface DataProps {
+  title: string;
+  href: string;
+  index: number;
+}
+
+interface NavLinksProps {
+  data: DataProps;
+  isActive: boolean;
+  setSelectedIndicator: (href: string) => void;
+  classNameLink: string;
+  classNameHref: string;
+}
+
 const navbarSlideUp = {
   initial: {
     y: -100,
@@ -28,7 +42,7 @@ export default function NavLinks({
   setSelectedIndicator,
   classNameLink,
   classNameHref,
-}: any) {
+}: NavLinksProps) {
   const { title, href, index } = data;
 
   

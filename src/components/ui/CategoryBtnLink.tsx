@@ -4,13 +4,26 @@ import React from "react";
 import { motion } from "framer-motion";
 import { progress, revealsText } from "@/data/animation";
 
+interface DataProps {
+  title: string;
+  index: number;
+}
+
+interface CategoryBtnLinkProps {
+  data: DataProps;
+  isActive: boolean;
+  setSelectedIndicator: (href: string) => void;
+  classNameLink: string;
+  classNameHref: string;
+}
+
 export default function CategoryBtnLink({
     data,
     isActive,
     setSelectedIndicator,
     classNameLink,
     classNameHref,
-  }: any) {
+  }: CategoryBtnLinkProps) {
     const { title, index } = data;
 
   return (
