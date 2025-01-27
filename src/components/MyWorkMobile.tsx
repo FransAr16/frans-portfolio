@@ -31,20 +31,8 @@ export default function MyWorkMobile({
 
   return (
     <div key={index} className="w-full h-full">
-      <div ref={ref} className="flex w-full relative">
+      <div className="flex w-full relative">
         <motion.div
-          initial={{
-            clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
-          }}
-          animate={{
-            clipPath: isInViewImg
-              ? "polygon(0 0, 100% 0, 100% 100%, 0 100%)"
-              : "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)",
-          }}
-          exit={{
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-          }}
-          transition={{ delay: 0.5, duration: 1.2, ease: "easeInOut" }}
           className="flex items-center justify-center w-full h-[20rem] sm:h-[16rem] md:h-[20rem] px-7"
           style={{ backgroundColor: bgColor }}
         >
