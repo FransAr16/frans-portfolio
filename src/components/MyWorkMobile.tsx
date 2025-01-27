@@ -58,7 +58,7 @@ export default function MyWorkMobile({
               src={`/img/${img}`}
               width={1920}
               height={1080}
-              alt={title}
+              alt=''
               className={`${imgClassName} w-full h-auto`}
             />
           </motion.div>
