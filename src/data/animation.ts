@@ -32,12 +32,12 @@ export const fadeIn = {
   open: {
     y: "0%",
     opacity: 1,
-    transition: { duration: 0.75, delay: 0.2, ease: "easeInOut" },
+    transition: { duration: 1, delay: 0.2, ease: "easeInOut" },
   },
   closed: {
     y: "100%",
     opacity: 0,
-    transition: { duration: 0.75, delay: 0.2, ease: "easeInOut" },
+    transition: { duration: 1, delay: 0.2, ease: "easeInOut" },
   },
 };
 

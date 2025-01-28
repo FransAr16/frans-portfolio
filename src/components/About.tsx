@@ -55,11 +55,11 @@ export default function About() {
               exit={{
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
               }}
-              transition={{ delay: 0.5, duration: 1.2, ease: "easeInOut" }}
+              transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
               className="w-full h-full sm:w-[12rem] sm:h-[15rem] md:w-[16rem] md:h-[19rem] lg:w-[10rem] lg:h-[13rem] xl:w-[12rem] xl:h-[15rem] 2xl:w-[18rem] 2xl:h-[22rem]"
             >
               <motion.div
-                initial={{ scale: 1.6 }}
+                initial={{ scale: 1.5 }}
                 animate={isInViewImg ? { scale: 1 } : { scale: 1.5 }}
                 transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
                 className="w-full h-full"
@@ -84,7 +84,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex w-full h-full order-first lg:order-last">
+        <div className="flex w-full h-full order-first lg:order-first">
           <div className="flex flex-col">
             <div className="flex flex-col gap-[2rem] lg:gap-[3rem] 2xl:gap-[4rem]">
               {/* Desktop */}

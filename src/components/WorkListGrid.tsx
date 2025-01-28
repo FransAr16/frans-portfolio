@@ -60,12 +60,12 @@ export default function WorkListGrid({
             exit={{
               clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
             }}
-            transition={{ delay: 0.5, duration: 1.2, ease: "easeInOut" }}
+            transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
             className="flex items-center justify-center w-full lg:h-[28rem] xl:h-[31rem] 2xl:h-[45rem] lg:px-[2.5rem] 2xl:px-[3.5rem]"
             style={{ backgroundColor: bgColor }}
           >
             <motion.div
-              initial={{ scale: 1.6 }}
+              initial={{ scale: 1.5 }}
               animate={isInViewImg ? { scale: 1 } : { scale: 1.5 }}
               transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
               className=""

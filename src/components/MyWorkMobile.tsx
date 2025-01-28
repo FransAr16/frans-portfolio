@@ -44,12 +44,12 @@ export default function MyWorkMobile({
           exit={{
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
           }}
-          transition={{ delay: 0.5, duration: 1.2, ease: "easeInOut" }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
           className="flex items-center justify-center w-full h-[20rem] sm:h-[16rem] md:h-[20rem] px-7"
           style={{ backgroundColor: bgColor }}
         >
           <motion.div
-            initial={{ scale: 1.6 }}
+            initial={{ scale: 1.5 }}
             animate={isInViewImg ? { scale: 1 } : { scale: 1.5 }}
             transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
             className=""

@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 import LeniScroll from "@/app/hook/LenisScroll";
-import Sidebar from "./Sidebar";
-import Navbar from "./Navbar";
+import Sidebar from "@/components/Sidebar";
+import Navbars from "@/components/ui/Navbars";
 
 interface LogoProps {
   href: string;
@@ -24,10 +23,8 @@ interface MenuBtnProps {
   className?: string;
 }
 
-export default function Header() {
+export default function Headers() {
   const [isOpen, setIsOpen] = useState(false);
-  const logoRef = useRef<HTMLDivElement>(null);
-  const positionRef = useRef<HTMLDivElement>(null);
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -36,75 +33,6 @@ export default function Header() {
   const closeSidebar = () => {
     setIsOpen(false);
   };
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const viewportHeight = window.innerHeight;
-      const triggerHeight = 3 * viewportHeight; // 300vh
-
-      if (scrollY > triggerHeight) {
-        // Show logo and position
-        gsap.to(logoRef.current, {
-          opacity: 1,
-          y: 0,
-          duration: 0.75,
-          ease: "easeInOut",
-        });
-        gsap.to(positionRef.current, {
-          opacity: 1,
-          y: 0,
-          duration: 0.75,
-          ease: "easeInOut",
-        });
-      } else {
-        // Hide logo and position
-        gsap.to(logoRef.current, {
-          opacity: 0,
-          y: 50,
-          duration: 0.2,
-          ease: "power2.out",
-        });
-        gsap.to(positionRef.current, {
-          opacity: 0,
-          y: 50,
-          duration: 0.2,
-          ease: "power2.out",
-        });
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Home") {
-        // Hide logo and position
-        gsap.to(logoRef.current, {
-          opacity: 0,
-          y: 50,
-          duration: 0.2,
-          ease: "power2.out",
-        });
-        gsap.to(positionRef.current, {
-          opacity: 0,
-          y: 50,
-          duration: 0.2,
-          ease: "power2.out",
-        });
-      }
-    };
-  
-    window.addEventListener("keydown", handleKeyDown);
-    return () => {
-      window.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-  
 
   return (
     <>
@@ -122,11 +50,7 @@ export default function Header() {
                     className="font-black text-[2.4rem]"
                   />
                 </div>
-                <div
-                  ref={logoRef}
-                  style={{ transform: "translateY(100%)", opacity: 0 }}
-                  className="hidden lg:flex"
-                >
+                <div className="hidden lg:flex">
                   <Logo
                     href="/"
                     text="FRANS"
@@ -135,11 +59,7 @@ export default function Header() {
                 </div>
               </div>
               {/* Position */}
-              <div
-                ref={positionRef}
-                style={{ transform: "translateY(100%)", opacity: 0 }}
-                className="hidden lg:block col-span-5 pointer-events-none"
-              >
+              <div className="hidden lg:block col-span-5 pointer-events-none">
                 <div className="flex z-40">
                   <Position
                     text="(Frontend Developer)"
@@ -149,7 +69,7 @@ export default function Header() {
               </div>
               {/* Nav */}
               <div className="lg:col-span-5 hidden lg:block">
-                <Navbar />
+                <Navbars />
               </div>
 
               <div className="flex lg:hidden justify-end col-span-4 items-center">
@@ -193,8 +113,8 @@ export default function Header() {
 
 function Logo({ href, text, className }: LogoProps) {
   const LogoSlideUp = {
-    initial: { y: "100%" },
-    animate: { y: "0%", transition: { duration: 0.2, ease: "easeInOut" } },
+    initial: { y: "100%", transition: { duration: 0.75, delay: 0.75, ease: "easeInOut" } },
+    animate: { y: "0%", transition: { duration: 0.75, delay: 0.75, ease: "easeInOut" } },
   };
   const LogoMobileSlideUp = {
     initial: {
@@ -205,7 +125,7 @@ function Logo({ href, text, className }: LogoProps) {
       transition: {
         duration: 1,
         ease: [0.76, 0, 0.24, 1],
-        delay: 2.8 + 0.05 * index,
+        delay: 0.75 + 0.05 * index,
       },
     }),
   };
@@ -234,7 +154,7 @@ function Logo({ href, text, className }: LogoProps) {
           {text.split("").map((word, index) => (
             <span
               key={index}
-              className={`${className} relative font-montserrat overflow-hidden lg:hidden inline-flex tracking-normal leading-[100%]`}
+              className={`${className} relative font-montserrat overflow-hidden lg:hidden inline-flex tracking-tight leading-[100%]`}
             >
               <motion.span
                 variants={LogoMobileSlideUp}
@@ -254,8 +174,8 @@ function Logo({ href, text, className }: LogoProps) {
 
 function Position({ text, className }: PositionProps) {
   const positionSlideUp = {
-    initial: { y: "100%" },
-    animate: { y: "0%", transition: { duration: 0.2, ease: "easeInOut" } },
+    initial: { y: "100%", transition: { duration: 0.75, delay: 0.75, ease: "easeInOut" } },
+    animate: { y: "0%", transition: { duration: 0.75, delay: 0.75, ease: "easeInOut" } },
   };
 
   return (
@@ -294,7 +214,7 @@ function MenuBtn({ text, className }: MenuBtnProps) {
       transition: {
         duration: 1,
         ease: "easeInOut",
-        delay: 2.8,
+        delay: 0.75,
       },
     },
   };

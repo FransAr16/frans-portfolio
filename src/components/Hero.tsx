@@ -147,7 +147,7 @@ export default function Hero() {
                         className="font-medium 2xl:font-semibold mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
                       />
                       <LetterLight
-                        text="Web Developer"
+                        text="Frontend Developer"
                         className="font-medium 2xl:font-semibold mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
                       />
                     </div>

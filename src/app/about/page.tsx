@@ -1,9 +1,19 @@
-import React from 'react'
+import React from "react";
+import MainLayout from "@/components/MainLayout";
+import Headers from "@/components/ui/Headers";
+import AboutHero from "./components/AboutHero";
+import MoreAboutMe from "./components/MoreAboutMe";
 
 export default function About() {
   return (
-    <div className='flex h-screen w-full justify-center items-center text-[2rem]'>
-      ABOUT
-    </div>
-  )
+    <MainLayout>
+      <Headers />
+      <main className="relative overflow-hidden w-full h-full">
+        <div className="w-full h-full relative">
+          <AboutHero />
+          <MoreAboutMe />
+        </div>
+      </main>
+    </MainLayout>
+  );
 }

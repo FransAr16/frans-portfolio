@@ -30,7 +30,7 @@ export default function FooterNavBottom() {
       <div className="grid grid-cols-12 gap-1 lg:gap-4 w-full pb-[1.5rem] sm:pb-[2rem] lg:pb-[2rem] pt-[4rem] sm:pt-[8rem] lg:pt-[10rem]">
         <div className="hidden lg:col-span-4 lg:flex">
           <TextSlideUp
-            text="All right reserved&copy;Frans 2025"
+            text="All right reserved&copy;2025 Frans"
             animate={revealsText}
             className="font-medium 2xl:font-semibold mr-[4px] lg:mr-[6px] text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
           />
