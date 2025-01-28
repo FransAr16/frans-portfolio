@@ -4,8 +4,7 @@ import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import Image from "next/image";
 import TextSlideUp from "@/components/ui/TextSlideUp";
-import { fadeIn, revealsText } from "@/data/animation";
-import TextFadeIn from "@/components/ui/TextFadeIn";
+import { revealsText } from "@/data/animation";
 
 export default function AboutHeading() {
   const ref = useRef(null);
