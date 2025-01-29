@@ -77,7 +77,7 @@ export default function About() {
 
           <div className="w-[70%] sm:w-[14rem] lg:w-[12rem] xl:w-[13rem] 2xl:w-[18rem] order-first lg:order-last">
             <TextSlideUp
-              text="Frans - Frontend Developer @DKI Jakarta 2024"
+              text="© 2024 Frans - Frontend Developer @ DKI Jakarta"
               animate={revealsText}
               className="font-medium 2xl:font-semibold mr-[4px] lg:mr-[6px] leading-[120%] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
             />

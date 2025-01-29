@@ -27,7 +27,7 @@ export default function FooterNav() {
               />
             </div>
             <div className="flex flex-col">
-              {["Home", "Work", "About", "Contacts", "Playground"].map(
+              {["/", "work", "about", "contact", "playground"].map(
                 (item, index) => (
                   <div className="flex" key={index}>
                     <NavItem

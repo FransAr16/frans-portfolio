@@ -154,7 +154,7 @@ function Logo({ href, text, className }: LogoProps) {
           {text.split("").map((word, index) => (
             <span
               key={index}
-              className={`${className} relative font-montserrat overflow-hidden lg:hidden inline-flex tracking-tight leading-[100%]`}
+              className={`${className} relative font-montserrat overflow-hidden lg:hidden inline-flex tracking-normal leading-[100%]`}
             >
               <motion.span
                 variants={LogoMobileSlideUp}
