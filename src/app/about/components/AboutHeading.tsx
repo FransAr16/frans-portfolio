@@ -4,7 +4,8 @@ import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import Image from "next/image";
 import TextSlideUp from "@/components/ui/TextSlideUp";
-import { revealsText } from "@/data/animation";
+import { fadeIn, revealsText } from "@/data/animation";
+import TextFadeIn from "@/components/ui/TextFadeIn";
 
 export default function AboutHeading() {
   const ref = useRef(null);
@@ -28,7 +29,7 @@ export default function AboutHeading() {
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
               }}
               transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-              className="w-[60%] h-full sm:w-[38%] md:w-[32%] lg:w-[12.5rem] xl:w-[14rem] 2xl:w-[18rem]"
+              className="w-[60%] h-full sm:w-[38%] md:w-[32%] lg:w-[15rem] xl:w-[20vw] 2xl:w-[26rem] lg:pt-[1rem]"
             >
               <motion.div
                 initial={{ scale: 1.5 }}
@@ -47,7 +48,7 @@ export default function AboutHeading() {
             </motion.div>
           </div>
 
-          <div className="w-[70%] sm:w-[14rem] lg:w-[12.5rem] xl:w-[14rem] 2xl:w-[18rem] order-last">
+          <div className="w-[70%] sm:w-[14rem] lg:w-[15rem] xl:w-[20vw] 2xl:w-[26rem] order-last">
             <TextSlideUp
               text="© 2024 Frans - Frontend Developer"
               animate={revealsText}
@@ -56,22 +57,23 @@ export default function AboutHeading() {
           </div>
         </div>
 
+        {/* Desc */}
         <div className="flex w-full h-full lg:h-full lg:order-first">
           <div className="flex flex-col">
             <div className="flex flex-col gap-[2rem] lg:gap-[3rem] 2xl:gap-[4rem]">
-              <div className="flex md:w-[80%] lg:w-full">
+              <div className="flex md:w-[80%] lg:w-[90%]">
                 <TextSlideUp
-                  text="I'm Frans, a passionate Frontend Developer based in Indonesia."
+                  text="I blend design and development to deliver impactful experiences."
                   animate={revealsText}
-                  className="font-medium mr-[8px] xl:mr-[12px] 2xl:mr-[16px] text-[2rem] sm:text-[2.5rem] lg:text-[2.4rem] xl:text-[3.2vw] 2xl:text-[4rem]"
+                  className="font-medium mr-[8px] xl:mr-[18px] 2xl:mr-[20px] text-[clamp(2.3rem,10vw,10rem)] leading-[110%] sm:text-[5.5vw] sm:leading-[110%] lg:text-[5.2vw] lg:leading-[106%]"
                 />
               </div>
 
-              <div className="flex md:w-[80%] lg:w-full">
-                <TextSlideUp
-                  text="I specialize in creating visually stunning and highly functional web interfaces that deliver exceptional user experiences."
-                  animate={revealsText}
-                  className="font-medium mr-[8px] xl:mr-[12px] 2xl:mr-[16px] text-[2rem] sm:text-[2.5rem] lg:text-[2.4rem] xl:text-[3.2vw] 2xl:text-[4rem]"
+              <div className="flex md:w-[75%] lg:w-[80%] xl:w-[75%]">
+                <TextFadeIn
+                  slideUp={fadeIn}
+                  phrase="I'm Frans, a passionate Frontend Developer based in Indonesia. I specialize in creating visually stunning and highly functional web interfaces that deliver exceptional user experiences, with a strong focus on user interface, animations & interactions."
+                  className="font-medium mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem] leading-[120%]"
                 />
               </div>
             </div>

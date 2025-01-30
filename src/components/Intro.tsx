@@ -130,7 +130,7 @@ export default function Intro() {
                 key={index}
                 text={line}
                 animate={revealsText}
-                className="font-medium mr-[8px] xl:mr-[18px] 2xl:mr-[20px] tracking-[-0.04em] text-[5.5vw] leading-[110%]"
+                className="font-medium mr-[8px] xl:mr-[18px] 2xl:mr-[20px] text-[5.5vw] leading-[110%]"
               ></TextSlideUp>
             ))}
           </div>
@@ -142,7 +142,7 @@ export default function Intro() {
                 key={index}
                 text={line}
                 animate={revealsText}
-                className="font-medium mr-[8px] xl:mr-[18px] 2xl:mr-[20px] tracking-[-0.04em] text-[clamp(2.3rem,10vw,10rem)] leading-[110%]"
+                className="font-medium mr-[8px] xl:mr-[18px] 2xl:mr-[20px] text-[clamp(2.3rem,10vw,10rem)] leading-[110%]"
               ></TextSlideUp>
             ))}
           </div>

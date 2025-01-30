@@ -60,7 +60,7 @@ export default function FooterNavBottom() {
         </div>
         <div className="col-span-12 lg:hidden flex">
           <TextSlideUp
-            text="(All right reserved&copy;Frans 2025)"
+            text="(&copy; 2025 Frans. All rights reserved)"
             animate={revealsText}
             className="font-medium 2xl:font-semibold mr-[4px] lg:mr-[6px] text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
           />
@@ -89,6 +89,7 @@ export default function FooterNavBottom() {
           </div>
         </div>
         {/* back to top */}
+        
         <div className="col-span-6 lg:col-span-2 flex pt-[3rem] lg:pt-0">
           <div className="flex items-center justify-center gap-1">
             <div
@@ -138,6 +139,7 @@ export default function FooterNavBottom() {
             </div>
           </div>
         </div>
+        {/* Info & Credits */}
         <div className="col-span-6 lg:col-span-2 flex pt-[3rem] lg:pt-0 justify-end">
           <FooterItem
             href="/info-credit"
