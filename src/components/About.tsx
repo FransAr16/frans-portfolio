@@ -84,7 +84,7 @@ export default function About() {
           </div>
         </div>
 
-        <div className="flex w-full h-full order-first lg:order-first">
+        <div className="flex w-full h-full order-first lg:order-last">
           <div className="flex flex-col">
             <div className="flex flex-col gap-[2rem] lg:gap-[3rem] 2xl:gap-[4rem]">
               {/* Desktop */}

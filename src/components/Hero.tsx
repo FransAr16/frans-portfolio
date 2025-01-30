@@ -170,7 +170,7 @@ export default function Hero() {
                 <div className="relative w-full h-full flex justify-end items-center">
                   <motion.div
                     style={{ clipPath: clipPathValueSecond }}
-                    className="absolute hidden lg:block right-[47%] 2xl:right-[49.5%] w-[1rem] h-[101%] bg-background z-10"
+                    className="absolute hidden lg:block right-[47%] xl:right-[49.2%] 2xl:right-[49.5%] w-[1rem] h-[101%] bg-background z-10"
                   ></motion.div>
                   <motion.div
                     style={{ clipPath: clipPathValue }}
