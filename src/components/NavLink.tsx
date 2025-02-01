@@ -1,9 +1,8 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import Link from "next/link";
-import { progress } from "@/data/animation";
 
 interface DataProps {
   title: string;
@@ -15,37 +14,33 @@ interface NavlinkProps {
   data: DataProps;
   isActive: boolean;
   setSelectedIndicator: (href: string) => void;
+  animate: Variants;
   classNameLink: string;
   classNameHref: string;
 }
 
-const navbarSlideUp = {
-  initial: {
-    y: -100,
-    opacity: 0,
+const progress = {
+  open: {
+    width: "100%",
+    transition: { duration: .5, ease: [0.76, 0, 0.24, 1] },
   },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.75,
-      ease: "easeInOut",
-      delay: 2.8,
-    },
+
+  closed: {
+    width: "0%",
+    transition: { duration: .5, ease: [0.76, 0, 0.24, 1] },
   },
 };
-
 
 export default function NavLink({
   data,
   isActive,
   setSelectedIndicator,
+  animate,
   classNameLink,
   classNameHref,
 }: NavlinkProps) {
-  const { title, href, index } = data;
 
-  
+  const { title, href, index } = data;
 
   return (
     <motion.div
@@ -54,19 +49,20 @@ export default function NavLink({
         setSelectedIndicator(href);
       }}
       custom={index}
-      variants={navbarSlideUp}
+      variants={animate}
       initial="initial"
       animate="animate"
     >
+      <Link className={`${classNameLink}`} href={href}>
+        {title}
+      </Link>
+
       <motion.div
         variants={progress}
         animate={isActive ? "open" : "closed"}
         className={`${classNameHref}`}
       ></motion.div>
 
-      <Link className={`${classNameLink}`} href={href}>
-        {title}
-      </Link>
     </motion.div>
   );
 }

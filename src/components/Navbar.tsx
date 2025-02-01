@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import NavLink from "./NavLink";
+import { navbarSlideUp } from "@/data/animation";
 
 interface ContactProps {
   href: string;
@@ -48,6 +49,8 @@ export default function Navbar() {
                   data={{ ...item, index }}
                   isActive={selectedIndicator === item.href}
                   setSelectedIndicator={setSelectedIndicator}
+                  animate={navbarSlideUp}
+                  // underline={underLineBtn}
                   classNameLink="font-medium text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
                   classNameHref=" w-full h-[1px] bg-background absolute left-0 bottom-0"
                 />

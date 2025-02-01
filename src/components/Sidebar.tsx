@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "motion/react";
 import Link from "next/link";
 
@@ -206,6 +207,8 @@ function Title({ text, className }: TitleProps) {
 }
 
 function MobileNavItem({ href, text, className }: MobileNavItemProps) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
   const [isHovered, setIsHovered] = useState(false);
 
   const navbarSlideUp = {
@@ -219,6 +222,14 @@ function MobileNavItem({ href, text, className }: MobileNavItemProps) {
       y: 100,
       opacity: 0,
       transition: { duration: 1, ease: [0.76, 0, 0.24, 1] },
+    },
+  };
+
+  const underLineBtn = {
+    initial: { width: "0%", y: 0 },
+    animate: {
+      width: "100%",
+      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
     },
   };
 
@@ -253,14 +264,20 @@ function MobileNavItem({ href, text, className }: MobileNavItemProps) {
             variants={navbarSlideUp}
             initial="initial"
             animate="animate"
+            exit="exit"
             className="pt-0"
           >
             <div className="relative w-full h-[2px] overflow-hidden">
-              <div
-                className={`absolute top-0 left-0 h-full bg-background transition-all duration-600 ease-underLine ${
-                  isHovered ? "w-full" : "w-0"
-                }`}
-              ></div>
+              <motion.div
+                variants={underLineBtn}
+                initial="initial"
+                animate={isHovered || isActive ? "animate" : "initial"}
+                className="absolute top-0 left-0 h-full bg-background transition-all duration-600 ease-underLine"
+                style={{
+                  width: isHovered || isActive ? "100%" : "0%",
+                  transition: "width 0.6s ease",
+                }}
+              ></motion.div>
             </div>
           </motion.div>
         </div>
