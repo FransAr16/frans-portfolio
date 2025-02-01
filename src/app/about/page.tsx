@@ -3,6 +3,8 @@ import MainLayout from "@/components/MainLayout";
 import Headers from "@/components/ui/Headers";
 import AboutHero from "./components/AboutHero";
 import MoreAboutMe from "./components/MoreAboutMe";
+import AboutSkills from "./components/AboutSkills";
+import Footer from "@/components/Footer";
 
 export default function About() {
   return (
@@ -12,6 +14,8 @@ export default function About() {
         <div className="w-full h-full relative">
           <AboutHero />
           <MoreAboutMe />
+          <AboutSkills />
+          <Footer />
         </div>
       </main>
     </MainLayout>
