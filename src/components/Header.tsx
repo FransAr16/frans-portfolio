@@ -142,7 +142,7 @@ export default function Header() {
               >
                 <div className="flex z-40">
                   <Position
-                    text="(Frontend Developer)"
+                    text="(Web Developer)"
                     className="font-medium text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
                   />
                 </div>

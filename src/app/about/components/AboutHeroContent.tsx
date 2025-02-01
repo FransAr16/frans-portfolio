@@ -7,7 +7,7 @@ import TextSlideUp from "@/components/ui/TextSlideUp";
 import { fadeIn, revealsText } from "@/data/animation";
 import TextFadeIn from "@/components/ui/TextFadeIn";
 
-export default function AboutHeading() {
+export default function AboutHeroContent() {
   const ref = useRef(null);
   const isInViewImg = useInView(ref, { once: true });
 
@@ -50,7 +50,7 @@ export default function AboutHeading() {
 
           <div className="w-[70%] sm:w-[14rem] lg:w-[15rem] xl:w-[20vw] 2xl:w-[25rem] order-last">
             <TextSlideUp
-              text="© 2024 Frans - Frontend Developer"
+              text="© 2024 Frans - Web Developer"
               animate={revealsText}
               className="font-medium 2xl:font-semibold mr-[4px] lg:mr-[6px] leading-[120%] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
             />

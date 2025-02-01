@@ -73,7 +73,8 @@ export default function AboutSkills() {
 
               <div className="flex flex-col gap-[2rem] lg:gap-[3rem] 2xl:gap-[4rem]">
                 <div className="grid grid-cols-12 gap-10 lg:gap-[4rem] xl:gap-[5rem]">
-                  <div className="col-span-12 lg:col-span-4 flex flex-col gap-6 lg:gap-10">
+                  {/* Language */}
+                  <div className="col-span-12 lg:col-span-3 flex flex-col gap-6 lg:gap-10">
                     <div className="flex">
                       <TextSlideUp
                         text="(Languages)"
@@ -105,7 +106,8 @@ export default function AboutSkills() {
                       ))}
                     </div>
                   </div>
-                  <div className="col-span-12 lg:col-span-8 flex flex-col gap-6 lg:gap-10">
+                  {/* Frameworks */}
+                  <div className="col-span-12 lg:col-span-5 flex flex-col gap-6 lg:gap-10">
                     <div className="flex">
                       <TextSlideUp
                         text="(Frameworks/Libraries/Others)"
@@ -120,8 +122,8 @@ export default function AboutSkills() {
                             "React.js",
                             "GSAP",
                             "Three.js",
+                            "Next.js",
                             "Tailwind CSS",
-                            "-",
                           ].map((item, index) => (
                             <div
                               className="flex items-center gap-3 lg:gap-4"
@@ -141,40 +143,58 @@ export default function AboutSkills() {
 
                       <div>
                         <div className="flex flex-col gap-3 lg:gap-4">
-                          {[
-                            "Next.js",
-                            "Motion",
-                            "-",
-                            "-",
-                            "-",
-                          ].map((item, index) => (
-                            <div
-                              className="flex items-center gap-3 lg:gap-4"
-                              key={index}
-                            >
-                              <FaCircle className="text-[.35rem] lg:text-[.4rem]" />
+                          {["Motion"].map(
+                            (item, index) => (
+                              <div
+                                className="flex items-center gap-3 lg:gap-4"
+                                key={index}
+                              >
+                                <FaCircle className="text-[.35rem] lg:text-[.4rem]" />
 
-                              <TextFadeIn
-                                slideUp={fadeIn}
-                                phrase={item}
-                                className="font-medium mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem] leading-[120%]"
-                              />
-                            </div>
-                          ))}
+                                <TextFadeIn
+                                  slideUp={fadeIn}
+                                  phrase={item}
+                                  className="font-medium mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem] leading-[120%]"
+                                />
+                              </div>
+                            )
+                          )}
                         </div>
                       </div>
                     </div>
                   </div>
+                  {/* Database */}
+                  <div className="col-span-12 lg:col-span-4 flex flex-col gap-6 lg:gap-10">
+                    <div className="flex">
+                      <TextSlideUp
+                        text="(Database)"
+                        animate={revealsText}
+                        className="font-medium 2xl:font-semibold mr-[4px] lg:mr-[6px] leading-[120%] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
+                      />
+                    </div>
+
+                    <div className="flex flex-col gap-3 lg:gap-4">
+                      {[
+                        "PostgreSQL",
+                        "Prisma",
+                      ].map((item, index) => (
+                        <div
+                          className="flex items-center gap-3 lg:gap-4"
+                          key={index}
+                        >
+                          <FaCircle className="text-[.35rem] lg:text-[.4rem]" />
+
+                          <TextFadeIn
+                            slideUp={fadeIn}
+                            phrase={item}
+                            className="font-medium mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem] leading-[120%]"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
 
-                <div className="flex">
-                  <Button
-                    href="/about"
-                    slideUp={revealsText}
-                    text="Learn more about me"
-                    className="font-medium 2xl:font-semibold text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
-                  />
-                </div>
               </div>
             </div>
           </div>
