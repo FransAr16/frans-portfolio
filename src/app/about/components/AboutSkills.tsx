@@ -3,20 +3,21 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import Image from "next/image";
-import { fadeIn, revealsText } from "@/data/animation";
+import { fadeIn, revealsText, slideUp } from "@/data/animation";
 import TextSlideUp from "@/components/ui/TextSlideUp";
-import Button from "@/components/ui/Button";
 import TextFadeIn from "@/components/ui/TextFadeIn";
 
-import { FaCircle } from "react-icons/fa";
+interface DotCircleProps {
+  circle?: boolean;
+}
 
 export default function AboutSkills() {
   const ref = useRef(null);
   const isInViewImg = useInView(ref, { once: true });
 
   return (
-    <div className="relative h-full w-full pt-[4rem] 2xl:pt-[12rem] pb-4 overflow-hidden">
-      <div className="flex flex-col lg:flex-row pt-[2rem] sm:pt-[2.5rem] lg:pt-[2.5rem] justify-between w-full gap-[8rem] lg:gap-[1.5rem] main-container">
+    <div className="relative h-full w-full py-[3rem] 2xl:py-[17rem] overflow-hidden">
+      <div className="flex flex-col lg:flex-row pt-[2rem] sm:pt-[2.5rem] lg:pt-[2.5rem] justify-between w-full gap-[2rem] lg:gap-[4rem] xl:gap-[6rem] 2xl:gap-[8rem] main-container">
         <div className="h-full w-full lg:w-[71%] flex flex-col gap-[1rem]">
           <div ref={ref}>
             <motion.div
@@ -32,7 +33,7 @@ export default function AboutSkills() {
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
               }}
               transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-              className="w-full h-full sm:w-[12rem] sm:h-[15rem] md:w-[16rem] md:h-[19rem] lg:w-[10rem] lg:h-[13rem] xl:w-[12rem] xl:h-[15rem] 2xl:w-[18rem] 2xl:h-[22rem]"
+              className="w-full h-full sm:h-[25rem] lg:h-[25rem] 2xl:h-[30rem]"
             >
               <motion.div
                 initial={{ scale: 1.5 }}
@@ -41,26 +42,18 @@ export default function AboutSkills() {
                 className="w-full h-full"
               >
                 <Image
-                  src="/profile.png"
-                  width={1678}
-                  height={2160}
+                  src="/"
+                  width={2624}
+                  height={2624}
                   alt="profile-img"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover bg-foreground"
                 />
               </motion.div>
             </motion.div>
           </div>
-
-          <div className="w-[70%] sm:w-[14rem] lg:w-[12rem] xl:w-[13rem] 2xl:w-[18rem] order-first lg:order-last">
-            <TextSlideUp
-              text="© 2024 Frans - Frontend Developer @ DKI Jakarta"
-              animate={revealsText}
-              className="font-medium 2xl:font-semibold mr-[4px] lg:mr-[6px] leading-[120%] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
-            />
-          </div>
         </div>
 
-        <div className="flex w-full h-full order-first lg:order-last">
+        <div className=" w-full h-full order-first lg:order-last">
           <div className="flex flex-col">
             <div className="flex flex-col gap-[2rem] lg:gap-[3rem] 2xl:gap-[4rem]">
               <div className="flex">
@@ -72,9 +65,9 @@ export default function AboutSkills() {
               </div>
 
               <div className="flex flex-col gap-[2rem] lg:gap-[3rem] 2xl:gap-[4rem]">
-                <div className="grid grid-cols-12 gap-10 lg:gap-[4rem] xl:gap-[5rem]">
+                <div className="flex flex-col lg:flex-row gap-10 lg:gap-5rem] xl:gap-[8rem]">
                   {/* Language */}
-                  <div className="col-span-12 lg:col-span-3 flex flex-col gap-6 lg:gap-10">
+                  <div className="flex flex-col gap-6 lg:gap-10">
                     <div className="flex">
                       <TextSlideUp
                         text="(Languages)"
@@ -95,8 +88,7 @@ export default function AboutSkills() {
                           className="flex items-center gap-3 lg:gap-4"
                           key={index}
                         >
-                          <FaCircle className="text-[.35rem] lg:text-[.4rem]" />
-
+                          <DotCircle circle />
                           <TextFadeIn
                             slideUp={fadeIn}
                             phrase={item}
@@ -107,7 +99,7 @@ export default function AboutSkills() {
                     </div>
                   </div>
                   {/* Frameworks */}
-                  <div className="col-span-12 lg:col-span-5 flex flex-col gap-6 lg:gap-10">
+                  <div className="flex flex-col gap-6 lg:gap-10">
                     <div className="flex">
                       <TextSlideUp
                         text="(Frameworks/Libraries/Others)"
@@ -129,8 +121,7 @@ export default function AboutSkills() {
                               className="flex items-center gap-3 lg:gap-4"
                               key={index}
                             >
-                              <FaCircle className="text-[.35rem] lg:text-[.4rem]" />
-
+                              <DotCircle circle />
                               <TextFadeIn
                                 slideUp={fadeIn}
                                 phrase={item}
@@ -143,14 +134,13 @@ export default function AboutSkills() {
 
                       <div>
                         <div className="flex flex-col gap-3 lg:gap-4">
-                          {["Motion"].map(
+                          {["Motion", "Prisma", "PostgreSQL"].map(
                             (item, index) => (
                               <div
                                 className="flex items-center gap-3 lg:gap-4"
                                 key={index}
                               >
-                                <FaCircle className="text-[.35rem] lg:text-[.4rem]" />
-
+                                <DotCircle circle />
                                 <TextFadeIn
                                   slideUp={fadeIn}
                                   phrase={item}
@@ -163,43 +153,41 @@ export default function AboutSkills() {
                       </div>
                     </div>
                   </div>
-                  {/* Database */}
-                  <div className="col-span-12 lg:col-span-4 flex flex-col gap-6 lg:gap-10">
-                    <div className="flex">
-                      <TextSlideUp
-                        text="(Database)"
-                        animate={revealsText}
-                        className="font-medium 2xl:font-semibold mr-[4px] lg:mr-[6px] leading-[120%] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
-                      />
-                    </div>
-
-                    <div className="flex flex-col gap-3 lg:gap-4">
-                      {[
-                        "PostgreSQL",
-                        "Prisma",
-                      ].map((item, index) => (
-                        <div
-                          className="flex items-center gap-3 lg:gap-4"
-                          key={index}
-                        >
-                          <FaCircle className="text-[.35rem] lg:text-[.4rem]" />
-
-                          <TextFadeIn
-                            slideUp={fadeIn}
-                            phrase={item}
-                            className="font-medium mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem] leading-[120%]"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                 </div>
-
+              </div>
+              <div className="flex">
+                <TextFadeIn
+                  slideUp={fadeIn}
+                  phrase="Developers need to learn everyday so this list could get really long :)."
+                  className="font-medium mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem] leading-[120%]"
+                />
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function DotCircle({ circle }: DotCircleProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(ref, { once: true });
+
+  return (
+    <div ref={ref} className="flex items-center w-[.32rem] h-[.32rem]">
+      {circle && (
+        <motion.div
+          initial={{ width: "0rem", height: "0rem" }}
+          animate={
+            isInView
+              ? { width: "0.32rem", height: "0.32rem", borderRadius: "9999px" }
+              : { width: "0rem", height: "0rem" }
+          }
+          transition={{ duration: 1, delay: 0.2, ease: "easeInOut" }}
+          className="bg-foreground"
+        />
+      )}
     </div>
   );
 }

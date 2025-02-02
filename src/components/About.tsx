@@ -56,7 +56,7 @@ export default function About() {
                 clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
               }}
               transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
-              className="w-full h-full sm:w-[12rem] sm:h-[15rem] md:w-[16rem] md:h-[19rem] lg:w-[10rem] lg:h-[13rem] xl:w-[12rem] xl:h-[15rem] 2xl:w-[18rem] 2xl:h-[22rem]"
+              className="w-full h-full sm:w-[14rem] sm:h-[15rem] md:w-[16rem] md:h-[19rem] lg:w-[11rem] lg:h-[14rem] xl:w-[13rem] xl:h-[16rem] 2xl:w-[18rem] 2xl:h-[22rem]"
             >
               <motion.div
                 initial={{ scale: 1.5 }}
@@ -69,13 +69,14 @@ export default function About() {
                   width={1678}
                   height={2160}
                   alt="profile-img"
+                  priority
                   className="w-full h-full object-cover"
                 />
               </motion.div>
             </motion.div>
           </div>
 
-          <div className="w-[70%] sm:w-[14rem] lg:w-[12rem] xl:w-[13rem] 2xl:w-[18rem] order-first lg:order-last">
+          <div className="w-[70%] sm:w-[15rem] md:w-[16rem] lg:w-[11rem] xl:w-[13rem] 2xl:w-[18rem] order-first lg:order-last">
             <TextSlideUp
               text="© 2024 Frans - Web Developer @ DKI Jakarta"
               animate={revealsText}

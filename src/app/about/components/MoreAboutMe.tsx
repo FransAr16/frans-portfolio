@@ -6,7 +6,7 @@ import { revealsText } from "@/data/animation";
 
 export default function MoreAboutMe() {
   return (
-    <div className="h-full w-full overflow-hidden relative pt-[4rem] 2xl:pt-[12rem] pb-4">
+    <div className="h-full w-full overflow-hidden relative pt-[4rem] sm:pt-0 lg:pt-[8rem]">
       <div className="flex flex-col main-container gap-[2rem] lg:gap-[3rem] 2xl:gap-[4rem]">
         <div className="grid grid-cols-12">
           <div className="flex col-span-12 lg:col-span-11">
