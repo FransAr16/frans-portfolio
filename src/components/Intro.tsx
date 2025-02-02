@@ -37,7 +37,7 @@ export default function Intro() {
 
   return (
     <div className="relative h-full w-full">
-      <div className="main-container w-full h-full py-[4rem] 2xl:py-[12rem] m-auto ">
+      <div className="main-container w-full h-full py-[4rem] lg:py-[8rem] 2xl:py-[12rem] m-auto ">
         <div className="w-full flex flex-col relative leading-none">
           {/* Intro */}
           <div className="w-full flex flex-col lg:flex-row items-start lg:items-end gap-2">

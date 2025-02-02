@@ -140,14 +140,14 @@ export default function Hero() {
                 />
 
                 <div className="w-full h-full lg:h-full flex items-end lg:items-end justify-end">
-                  <div className="w-full lg:w-1/2 flex gap-[10vw] sm:gap-[30vw] lg:gap-[4rem] 2xl:gap-[5rem] pb-3.5 lg:pb-[3rem] 2xl:pb-[3.5rem] lg:pl-[8.2%] 2xl:pl-[8.2%]">
+                  <div className="w-full lg:w-1/2 flex gap-[22vw] sm:gap-[30vw] lg:gap-[4rem] 2xl:gap-[5rem] pb-3.5 lg:pb-[3rem] 2xl:pb-[3.5rem] lg:pl-[8.2%] 2xl:pl-[8.2%]">
                     <div className="flex flex-col">
                       <LetterLight
                         text="Creative"
                         className="font-medium 2xl:font-semibold mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
                       />
                       <LetterLight
-                        text="Frontend Developer"
+                        text="Web Developer"
                         className="font-medium 2xl:font-semibold mr-[5px] xl:mr-[6px] text-[1.1rem] sm:text-[1.2rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
                       />
                     </div>
