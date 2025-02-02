@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
 import Image from "next/image";
-import { fadeIn, revealsText, slideUp } from "@/data/animation";
+import { fadeIn, revealsText } from "@/data/animation";
 import TextSlideUp from "@/components/ui/TextSlideUp";
 import TextFadeIn from "@/components/ui/TextFadeIn";
 
