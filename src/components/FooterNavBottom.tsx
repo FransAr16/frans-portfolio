@@ -76,7 +76,7 @@ export default function FooterNavBottom() {
           <div className="font-medium 2xl:font-semibold flex items-center text-[1rem] px-1">
             <FooterItem
               href=""
-              text="/"
+              text="-"
               className="font-medium 2xl:font-semibold text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
             />
           </div>
@@ -89,7 +89,6 @@ export default function FooterNavBottom() {
           </div>
         </div>
         {/* back to top */}
-        
         <div className="col-span-6 lg:col-span-2 flex pt-[3rem] lg:pt-0">
           <div className="flex items-center justify-center gap-1">
             <div
