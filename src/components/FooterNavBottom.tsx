@@ -44,11 +44,21 @@ export default function FooterNavBottom() {
             />
           </div>
           <div className="font-medium 2xl:font-semibold flex items-center text-[1rem] px-1">
-            <FooterItem
-              href=""
-              text="/"
-              className="font-medium 2xl:font-semibold text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
-            />
+            <div className="relative overflow-hidden inline-flex tracking-[-0.04em] leading-[104%]">
+              <motion.span
+                initial={{ y: "0%" }}
+                animate={{ y: "100%" }}
+                whileInView={{ y: "0%" }}
+                viewport={{ once: true, amount: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: [0.76, 0, 0.24, 1],
+                  delay: animationDelay,
+                }}
+              >
+                {"/"}
+              </motion.span>
+            </div>
           </div>
           <div className="flex">
             <FooterItem
@@ -58,6 +68,8 @@ export default function FooterNavBottom() {
             />
           </div>
         </div>
+
+        {/* Mobile */}
         <div className="col-span-12 lg:hidden flex">
           <TextSlideUp
             text="(2025 &copy; Edition - All Rights Reserved)"
@@ -74,11 +86,21 @@ export default function FooterNavBottom() {
             />
           </div>
           <div className="font-medium 2xl:font-semibold flex items-center text-[1rem] px-1">
-            <FooterItem
-              href=""
-              text="-"
-              className="font-medium 2xl:font-semibold text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
-            />
+            <div className="relative overflow-hidden inline-flex tracking-[-0.04em] leading-[104%]">
+              <motion.span
+                initial={{ y: "0%" }}
+                animate={{ y: "100%" }}
+                whileInView={{ y: "0%" }}
+                viewport={{ once: true, amount: 0 }}
+                transition={{
+                  duration: 1,
+                  ease: [0.76, 0, 0.24, 1],
+                  delay: animationDelay,
+                }}
+              >
+                {"/"}
+              </motion.span>
+            </div>
           </div>
           <div className="flex">
             <FooterItem

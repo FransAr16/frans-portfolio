@@ -12,23 +12,23 @@ interface ContentProps {
 const contents: ContentProps[] = [
   {
     title: "Intro",
-    desc: "One of my main priorities is the privacy of my visitors. This Privacy Policy document contains types of information that is collected and recorded by me, and how I use it. If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact me. This Privacy Policy applies only to my online activities and is valid for visitors to this website only. This policy is not applicable to any information collected offline or via channels other than this website.",
+    desc: "Welcome to my portfolio website. By accessing and using this website, you agree to be bound by the following terms and conditions. Please read them carefully before continuing to browse or interact with any content.",
   },
   {
-    title: "Consent",
-    desc: "By using this website, you hereby consent to this Privacy Policy and agree to its terms. If you contact me directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send, and any other information you may choose to provide",
+    title: "Intellectual Property Rights",
+    desc: "All content, including but not limited to code, design, text, graphics, and images on this website, is my intellectual property unless otherwise stated. You may not copy, distribute, or use any content without prior written permission.",
   },
   {
-    title: "Cookies and web beacons",
-    desc: "Like any other website, this website uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing  web pages content based on visitors' browser type and/or other information.",
+    title: "Use of the Website",
+    desc: "This website is intended to showcase my work and skills. You are allowed to browse and reference my work, but you may not use it for commercial purposes without consent. Any misuse of this site may result in legal action.",
   },
   {
-    title: "Third party privacy policies",
-    desc: "This website's Privacy Policy does not apply to other advertisers or websites. Thus, you should consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options. You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.",
+    title: "Limitation of Liability",
+    desc: "I am not responsible for any errors, outdated information, or technical issues that may arise from using this website. Use this site at your own risk. Any damages resulting from reliance on the content are solely your responsibility.",
   },
   {
-    title: "Data Protection & Privacy",
-    desc: "I take data protection seriously and ensure that any personal information collected through this website is securely stored and not shared with third parties without consent.",
+    title: "Changes to Terms & Conditions",
+    desc: "I reserve the right to modify these terms and conditions at any time without prior notice. Any changes will be posted on this page, and it is your responsibility to review them periodically.",
   },
 ];
 

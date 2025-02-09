@@ -16,7 +16,7 @@ const contents: ContentProps[] = [
   },
   {
     title: "Consent",
-    desc: "By using this website, you hereby consent to this Privacy Policy and agree to its terms. If you contact me directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send, and any other information you may choose to provide",
+    desc: "By using this website, you hereby consent to this Privacy Policy and agree to its terms. If you contact me directly, we may receive additional information about you such as your name, email address, phone number, the contents of the message and/or attachments you may send, and any other information you may choose to provide.",
   },
   {
     title: "Cookies and web beacons",
