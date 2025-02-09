@@ -143,7 +143,7 @@ export default function MyWorks() {
             initial={visible ? "hidden" : "exit"}
             animate={visible ? "visible" : "exit"}
             variants={animationVariants}
-            className="relative items-center justify-center overflow-hidden hidden lg:flex flex-col py-20 2xl:py-20"
+            className="relative items-center justify-center overflow-hidden hidden lg:flex flex-col py-[6rem] 2xl:py-[7rem]"
           >
             <div className="w-full flex items-center main-container pb-7 lg:pb-9 2xl:pb-12">
               {projectNav.map((project, index) => (
@@ -221,7 +221,7 @@ export default function MyWorks() {
             initial={visible ? "hidden" : "exit"}
             animate={visible ? "visible" : "exit"}
             variants={animationVariants}
-            className="main-container relative hidden lg:flex w-full h-full items-center justify-center lg:py-20 2xl:py-20"
+            className="main-container relative hidden lg:flex w-full h-full items-center justify-center lg:py-[6rem] 2xl:py-[7rem]"
           >
             <div className="w-full grid lg:grid-cols-2 lg:gap-y-[9rem] xl:gap-y-[10rem] 2xl:gap-y-[11rem] lg:gap-x-[2.5rem] xl:gap-x-[3.2rem] 2xl:gap-x-[5rem] items-center justify-center">
               {filteredProjects
