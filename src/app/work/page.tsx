@@ -10,7 +10,7 @@ export default function work() {
     <MainLayout>
       <Headers />
       <main className="relative overflow-hidden w-full h-full">
-        <div className="w-full h-full relative">
+        <div className="w-full h-full relative ">
           <WorkHero />
           <MyWorks />
           <Footer />
