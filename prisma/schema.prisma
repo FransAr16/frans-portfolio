@@ -8,10 +8,10 @@ datasource db {
   directUrl = env("DIRECT_URL")
 }
 
-model portfolio {
+model projects {
   id         String @id @default(uuid())
   title      String
   category   String
-  image_url  String?
+  image_url  String
   createdAt  DateTime @default(now())
 }
