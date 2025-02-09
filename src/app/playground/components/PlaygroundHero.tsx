@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import Projects from "./Projects";
 
 export default function PlaygroundHero() {
   return (
-    <div className='w-full h-full relative overflow-hidden'>
-        <div className='main-container'>
-        
-        </div>
+    <div className="w-full h-full relative overflow-hidden">
+      <div className="main-container">
+        <h1 className="text-3xl font-bold mb-6">My Projects</h1>
+        <Projects />
+      </div>
     </div>
-  )
+  );
 }
