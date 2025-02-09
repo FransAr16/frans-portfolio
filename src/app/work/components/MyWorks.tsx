@@ -248,7 +248,7 @@ export default function MyWorks() {
           </motion.div>
         )}
 
-        <div className="main-container ">
+        <div className="main-container">
           <div>
             <TextSlideUp
               text="See more work?"
