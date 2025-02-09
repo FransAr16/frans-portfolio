@@ -2,17 +2,17 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import Image from "next/image";
 import Link from "next/link";
 import TextSlideUp from "./ui/TextSlideUp";
 import { revealsText } from "@/data/animation";
+import { CldImage } from "next-cloudinary";
 
 interface WorkListGridProps {
   index: number;
   title: string;
   category: string;
   published: string;
-  img: string;
+  images: string;
   link: string;
   bgColor: string;
   imgClassName: string;
@@ -20,7 +20,7 @@ interface WorkListGridProps {
   activeCategory: string;
   projects: {
     id: number;
-    img: string;
+    images: string;
     bgColor: string;
     category: string;
   }[];
@@ -31,7 +31,7 @@ export default function WorkListGrid({
   title,
   category,
   published,
-  img,
+  images,
   bgColor,
   imgClassName,
   link,
@@ -70,16 +70,25 @@ export default function WorkListGrid({
               transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
               className=""
             >
-              <Image
-                src={`/img/${img}`}
-                width={1920}
-                height={1080}
-                alt={title}
-                className={`${imgClassName} w-full h-auto`}
-              />
+              <div
+                key={`modal_${index}`}
+                style={{ backgroundColor: bgColor }}
+                className="relative h-full flex items-center justify-center px-[2rem]"
+              >
+                <CldImage
+                  src={`${images}`}
+                  width={1920}
+                  height={1080}
+                  className={`${imgClassName} w-full h-auto`}
+                  alt="image-work"
+                  crop={{
+                    type: "auto",
+                    source: true,
+                  }}
+                />
+              </div>
             </motion.div>
           </motion.div>
-          
         </div>
         <div className="lg:pt-[2.8rem] lg:pb-[1.5rem] 2xl:pt-[3rem] 2xl:pb-[1.6rem] border-b">
           <TextSlideUp

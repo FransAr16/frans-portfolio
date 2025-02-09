@@ -71,7 +71,7 @@ export default function Sidebar({ onClose }: SidebarProps) {
             {/* Sidebar Content */}
             <nav className="h-full w-full flex">
               <div className="relative w-full flex flex-col text-background lg:hidden justify-between">
-                <div className="flex flex-col justify-end w-full mt-[32%]">
+                <div className="flex flex-col justify-end w-full mt-[33%]">
                   <div className="flex ">
                     <Title
                       text="(Navigate)"
@@ -109,7 +109,7 @@ export default function Sidebar({ onClose }: SidebarProps) {
                     </li>
                   </ul>
                 </div>
-                <div className="flex w-full pb-8">
+                <div className="flex w-full pb-[2.2rem]">
                   <MobileContact
                     href="/"
                     text="Start a project"

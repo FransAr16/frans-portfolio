@@ -30,7 +30,7 @@ export default function RecentWork() {
           </div>
         </div>
         {/* Desktop */}
-        <div className="relative items-center justify-center overflow-hidden hidden lg:flex">
+        <div className="relative items-center justify-center overflow-hidden hidden lg:flex main-container">
           <div className="w-full flex flex-col items-center justify-center border-t">
             {latestWork
               .slice(0, 4)
@@ -66,7 +66,7 @@ export default function RecentWork() {
                   title={project.title}
                   category={project.category}
                   published={project.published}
-                  img={project.img}
+                  images={project.images}
                   imgClassName=""
                   bgColor={project.bgColor}
                 />

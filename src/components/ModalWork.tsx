@@ -4,6 +4,7 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { motion } from "motion/react";
 import { latestWork } from "@/data/work";
+import { CldImage } from "next-cloudinary";
 
 const scaleAnimation = {
   initial: { scale: 0, x: "-50%", y: "-50%" },
@@ -34,9 +35,7 @@ interface ModalWorkProps {
   }[];
 }
 
-export default function ModalWork({
-  modal,
-}: ModalWorkProps) {
+export default function ModalWork({ modal }: ModalWorkProps) {
   const { active, index } = modal;
   const modalContainer = useRef<HTMLDivElement>(null);
   const cursor = useRef<HTMLDivElement>(null);
@@ -86,7 +85,6 @@ export default function ModalWork({
     };
   }, []);
 
-
   return (
     <>
       <motion.div
@@ -94,7 +92,7 @@ export default function ModalWork({
         variants={scaleAnimation}
         initial={"initial"}
         animate={active ? "open" : "closed"}
-        className="fixed h-[350px] w-[400px] 2xl:h-[480px] 2xl:w-[480px] flex items-center justify-center overflow-hidden pointer-events-none z-10"
+        className="fixed h-[350px] w-[400px] 2xl:h-[460px] 2xl:w-[480px] flex items-center justify-center overflow-hidden pointer-events-none z-10"
       >
         {/* modal slider */}
         <div
@@ -105,23 +103,24 @@ export default function ModalWork({
             .filter((project) => project.id >= 0 && project.id <= 4)
             .reverse()
             .map((project, index) => {
-              const { showcase, bgColor } = project;
+              const { images, bgColor } = project;
               return (
                 <div
                   key={`modal_${index}`}
                   style={{ backgroundColor: bgColor }}
                   className="relative h-full flex items-center justify-center px-[2rem]"
                 >
-                  <div className="h-10rem w-[30rem]">
-                      <video
-                        autoPlay
-                        muted
-                        loop
-                        className="w-full h-full object-cover aspect-video"
-                      >
-                        <source src={`/videos/${showcase}`} type="video/mp4" />
-                      </video>
-                  </div>
+                    <CldImage
+                      src={`${images}`}
+                      width={1920}
+                      height={1080}
+                      className="w-full object-cover"
+                      alt="image-work"
+                      crop={{
+                        type: "auto",
+                        source: true,
+                      }}
+                    />
                 </div>
               );
             })}

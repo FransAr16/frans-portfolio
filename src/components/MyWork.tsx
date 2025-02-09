@@ -27,7 +27,7 @@ export default function MyWork({
       }}
       className="flex w-full h-full items-center justify-between group outline-none cursor-pointer scroll-item"
     >
-      <div className="relative grid grid-cols-12 w-full border-b outline-none transition-all duration-200 ease-linear group py-[4rem] overflow-hidden main-container">
+      <div className="relative grid grid-cols-12 w-full border-b outline-none transition-all duration-200 ease-linear group py-[4rem] overflow-hidden">
         <div className="hidden lg:block lg:col-span-2">{/* blank */}</div>
         <div className="col-span-5 group-hover:text-foreground/30">
           <div className="group-hover:-translate-x-[2rem] transition-all duration-400 ease-out ">

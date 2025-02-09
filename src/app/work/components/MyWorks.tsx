@@ -71,27 +71,19 @@ export default function MyWorks() {
                 className="font-medium 2xl:font-semibold text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
               />
             </div>
-            <div onClick={() => handleCategoryChange("Portfolio")}>
+            <div onClick={() => handleCategoryChange("Design")}>
               <WorkCategoryBtn
                 animate={revealsText}
-                text="Portfolio"
-                isActive={activeCategory === "Portfolio"}
+                text="Design"
+                isActive={activeCategory === "Design"}
                 className="font-medium 2xl:font-semibold text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
               />
             </div>
-            <div onClick={() => handleCategoryChange("E-Commerce")}>
+            <div onClick={() => handleCategoryChange("Development")}>
               <WorkCategoryBtn
                 animate={revealsText}
-                text="E-Commerce"
-                isActive={activeCategory === "E-Commerce"}
-                className="font-medium 2xl:font-semibold text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
-              />
-            </div>
-            <div onClick={() => handleCategoryChange("Education")}>
-              <WorkCategoryBtn
-                animate={revealsText}
-                text="Education"
-                isActive={activeCategory === "Education"}
+                text="Development"
+                isActive={activeCategory === "Development"}
                 className="font-medium 2xl:font-semibold text-[1.1rem] sm:text-[1.2rem] md:text-[1rem] lg:text-[1.1rem] 2xl:text-[1.28rem]"
               />
             </div>
@@ -136,7 +128,7 @@ export default function MyWorks() {
                     title={project.title}
                     category={project.category}
                     published={project.published}
-                    img={project.img}
+                    images={project.images}
                     imgClassName=""
                     bgColor={project.bgColor}
                   />
@@ -242,7 +234,7 @@ export default function MyWorks() {
                     title={project.title}
                     category={project.category}
                     published={project.published}
-                    img={project.img}
+                    images={project.images}
                     link={project.link}
                     imgClassName=""
                     bgColor={project.bgColor}

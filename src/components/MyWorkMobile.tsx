@@ -2,9 +2,9 @@
 
 import React, { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import Image from "next/image";
 import TextSlideUp from "./ui/TextSlideUp";
 import { revealsText } from "@/data/animation";
+import { CldImage } from "next-cloudinary";
 
 interface MyWorkMobileProps {
   key: React.Key;
@@ -12,7 +12,7 @@ interface MyWorkMobileProps {
   title: string;
   category: string;
   published: string;
-  img: string;
+  images: string;
   bgColor: string;
   imgClassName: string;
 }
@@ -22,7 +22,7 @@ export default function MyWorkMobile({
   title,
   category,
   published,
-  img,
+  images,
   bgColor,
   imgClassName,
 }: MyWorkMobileProps) {
@@ -54,13 +54,16 @@ export default function MyWorkMobile({
             transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
             className=""
           >
-            <Image
-              src={`/img/${img}`}
+            <CldImage
+              src={`${images}`}
               width={1920}
               height={1080}
-              priority
-              alt='work'
               className={`${imgClassName} w-full h-auto`}
+              alt="image-work"
+              crop={{
+                type: "auto",
+                source: true,
+              }}
             />
           </motion.div>
         </motion.div>

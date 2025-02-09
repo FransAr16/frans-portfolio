@@ -26,7 +26,7 @@ interface LabelModalProps {
     index: number;
   };
   projects: {
-    img: string;
+    images: string;
     bgColor: string;
   }[];
 }
