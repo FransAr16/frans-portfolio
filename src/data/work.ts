@@ -150,7 +150,7 @@ export const myWork = [
     title: "Project 10",
     location: "Spain",
     published: "2024",
-    img: "../img/exam1.png",
+    img: "https://DatabaseImagePortfolio.b-cdn.net/TBR%20-%20723%20A.jpg",
     bgColor: "#6b6b6b",
     showcase: "../videos//work_1.mp4",
     category: "E-Commerce",
